@@ -1,0 +1,1719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>[Shop Name] · Carpets from Bhadohi</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hind:wght@400;500;600&display=swap"
+    />
+    <style>
+      :root {
+        --iv: #f7f0e3;
+        --iv2: #efe4cf;
+        --mr: #5e1420;
+        --wn: #3d2a1e;
+        --gd: #b8914a;
+        --tx: #2b1f17;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      :root:not([data-theme="light"]) {
+        color-scheme: light;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+      body {
+        margin: 0;
+        background: var(--iv);
+        color: var(--tx);
+        font:
+          400 16px/1.65 Hind,
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--gd);
+        outline-offset: 2px;
+      }
+      .w {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+      }
+      .sec {
+        padding: 72px 0;
+      }
+      .btn {
+        display: inline-block;
+        border: 1.5px solid var(--mr);
+        background: var(--mr);
+        color: var(--iv);
+        padding: 12px 26px;
+        border-radius: 2px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        transition: 0.25s;
+      }
+      .btn:hover {
+        background: var(--wn);
+        border-color: var(--wn);
+      }
+      .btn.o {
+        background: transparent;
+        color: var(--mr);
+      }
+      .btn.o:hover {
+        background: var(--mr);
+        color: var(--iv);
+      }
+      .btn.l {
+        background: transparent;
+        border-color: var(--iv);
+        color: var(--iv);
+      }
+      .btn.l:hover {
+        background: var(--iv);
+        color: var(--mr);
+      }
+      .btn.sm {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      .btn[disabled] {
+        opacity: 0.5;
+        cursor: wait;
+      }
+      h2 {
+        font-size: clamp(30px, 4vw, 46px);
+      }
+      .weave {
+        display: block;
+        width: 120px;
+        height: 8px;
+        margin: 14px 0 28px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--gd) 0 8px,
+          transparent 8px 12px
+        );
+        transform-origin: left;
+        animation: wv 1.2s ease both;
+      }
+      @keyframes wv {
+        from {
+          transform: scaleX(0);
+        }
+      }
+      /* nav */
+      nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 30;
+        padding-top: env(safe-area-inset-top, 0px);
+        color: var(--iv);
+        transition: 0.35s;
+      }
+      nav.s,
+      nav.solid {
+        background: var(--wn);
+        box-shadow: 0 2px 18px #0004;
+      }
+      nav .w {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 68px;
+      }
+      .logo {
+        font:
+          700 26px "Cormorant Garamond",
+          serif;
+        text-decoration: none;
+        margin-right: auto;
+        letter-spacing: 0.02em;
+      }
+      .nl {
+        display: flex;
+        gap: 24px;
+      }
+      .nl a {
+        text-decoration: none;
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+      .nl a:hover,
+      .nl a.on {
+        border-color: var(--gd);
+      }
+      .ic {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        position: relative;
+        padding: 8px;
+        font-size: 18px;
+        color: inherit;
+      }
+      .bd {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        background: var(--gd);
+        color: var(--wn);
+        font-size: 11px;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+      }
+      #mb {
+        display: none;
+      }
+      @media (max-width: 820px) {
+        #mb {
+          display: block;
+        }
+        .nl {
+          position: fixed;
+          inset: 68px 0 auto;
+          background: var(--wn);
+          flex-direction: column;
+          padding: 20px;
+          gap: 14px;
+          transform: translateY(-130%);
+          transition: 0.3s;
+        }
+        .nl.o {
+          transform: none;
+        }
+      }
+      #sb {
+        display: none;
+        background: var(--wn);
+        padding: 10px 20px;
+      }
+      #sb.o {
+        display: block;
+      }
+      #sb input {
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: auto;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 2px;
+      }
+      /* page transition */
+      #app {
+        min-height: 80vh;
+        animation: pg 0.45s ease;
+      }
+      @keyframes pg {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      }
+      .pt {
+        padding-top: 100px;
+      }
+      /* room / rugs */
+      .room {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(#e9dcc3 0 58%, #8a6a47 58%);
+        perspective: 900px;
+      }
+      .room .sofa {
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        top: 36%;
+        height: 24%;
+        background: var(--wn);
+        border-radius: 22px 22px 6px 6px;
+        box-shadow: inset 0 14px 0 #4d382a;
+      }
+      .room .lamp {
+        position: absolute;
+        right: 7%;
+        top: 14%;
+        width: 5px;
+        height: 46%;
+        background: var(--wn);
+      }
+      .room .lamp:before {
+        content: "";
+        position: absolute;
+        left: -26px;
+        top: -6px;
+        width: 56px;
+        height: 36px;
+        background: #f1d79a;
+        border-radius: 6px 6px 28px 28px;
+      }
+      .room .rug {
+        position: absolute;
+        left: 14%;
+        right: 14%;
+        top: 56%;
+        height: 60%;
+        transform: rotateX(62deg);
+        transform-origin: top;
+        box-shadow: 0 20px 40px #0006;
+      }
+      .rug svg,
+      .ph svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 560px;
+        color: var(--iv);
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        background: #2b1f17;
+      }
+      .hero .room {
+        position: absolute;
+        inset: 0;
+        animation: zm 26s ease-in-out infinite alternate;
+      }
+      .hero .rug {
+        will-change: transform;
+      }
+      @keyframes zm {
+        to {
+          transform: scale(1.12);
+        }
+      }
+      .hero:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, #2b1f17ee 5%, #2b1f1799 45%, #0000 80%),
+          linear-gradient(#0000 60%, #2b1f17cc);
+      }
+      .hero .w {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 12vh;
+      }
+      .hero h1 {
+        font-size: clamp(42px, 7vw, 88px);
+        max-width: 12em;
+      }
+      .hero p {
+        font-size: 20px;
+        max-width: 28em;
+        margin: 20px 0 30px;
+      }
+      .hero h1,
+      .hero p,
+      .hero .bt {
+        animation: up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      }
+      .hero p {
+        animation-delay: 0.2s;
+      }
+      .hero .bt {
+        animation-delay: 0.4s;
+      }
+      @keyframes up {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+      }
+      .bt {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      /* grids/cards */
+      .g4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 24px;
+      }
+      .cc {
+        display: block;
+        text-decoration: none;
+        color: var(--iv);
+        position: relative;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        border-radius: 4px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.3s;
+        transform-style: preserve-3d;
+      }
+      .cc .ph {
+        position: absolute;
+        inset: 0;
+        transition: transform 0.8s;
+      }
+      .cc:hover .ph {
+        transform: scale(1.07);
+      }
+      .cc:hover {
+        box-shadow: 0 18px 40px #0004;
+      }
+      .cc div.t {
+        position: absolute;
+        inset: auto 0 0;
+        padding: 60px 20px 20px;
+        background: linear-gradient(#0000, #2b1f17ee);
+      }
+      .cc h3 {
+        font-size: 28px;
+      }
+      .ph {
+        overflow: hidden;
+        background: var(--iv2);
+      }
+      .pc {
+        background: #fffaf0;
+        border: 1px solid #e3d5b8;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        transition: box-shadow 0.3s;
+      }
+      .pc:hover {
+        box-shadow: 0 14px 34px #3d2a1e33;
+      }
+      .pc .ph {
+        aspect-ratio: 4/5;
+        display: block;
+        cursor: pointer;
+      }
+      .pc .ph svg {
+        transition: transform 0.7s;
+      }
+      .pc:hover .ph svg {
+        transform: scale(1.07);
+      }
+      .pc .b {
+        padding: 14px 16px 18px;
+      }
+      .pc h3 {
+        font-size: 22px;
+      }
+      .mt {
+        color: #6d5a49;
+        font-size: 14px;
+      }
+      .pr {
+        font-weight: 600;
+        color: var(--mr);
+        margin: 6px 0 12px;
+      }
+      .wl {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #fffaf0e0;
+        border: 0;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        font-size: 18px;
+        color: var(--mr);
+        transition: transform 0.2s;
+      }
+      .wl.on {
+        background: var(--mr);
+        color: var(--iv);
+      }
+      .wl:active {
+        transform: scale(1.3);
+      }
+      .qv {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background: #fffaf0e0;
+        border: 0;
+        padding: 4px 10px;
+        font-size: 13px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .sp {
+        justify-content: space-between;
+      }
+      .dk {
+        background: var(--mr);
+        color: var(--iv);
+      }
+      .wd {
+        background: var(--wn);
+        color: var(--iv);
+      }
+      .iv2 {
+        background: var(--iv2);
+      }
+      .cols {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        align-items: center;
+      }
+      .tag {
+        display: inline-block;
+        border: 1px solid var(--gd);
+        color: var(--gd);
+        padding: 2px 10px;
+        font-size: 13px;
+        border-radius: 99px;
+      }
+      /* shop */
+      .shop {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 32px;
+      }
+      @media (max-width: 820px) {
+        .shop {
+          grid-template-columns: 1fr;
+        }
+        #fp {
+          display: none;
+        }
+        #fp.o {
+          display: block;
+          animation: pg 0.3s;
+        }
+      }
+      @media (min-width: 821px) {
+        #ft {
+          display: none;
+        }
+      }
+      .fl label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 14px 0 4px;
+      }
+      .fl select,
+      .fl input[type="range"] {
+        width: 100%;
+      }
+      select,
+      input,
+      textarea {
+        background: #fffaf0;
+        border: 1px solid #cdb98f;
+        border-radius: 2px;
+        padding: 9px 10px;
+        width: 100%;
+      }
+      .chip {
+        background: var(--iv2);
+        border: 1px solid var(--gd);
+        border-radius: 99px;
+        padding: 3px 12px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .empty {
+        text-align: center;
+        padding: 60px 20px;
+        border: 1px dashed var(--gd);
+      }
+      .note {
+        background: #fff3cf;
+        border: 1px solid var(--gd);
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 2px;
+        color: #4a3a14;
+      }
+      /* product */
+      .pd {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 40px;
+      }
+      @media (max-width: 820px) {
+        .pd {
+          grid-template-columns: 1fr;
+        }
+      }
+      .main {
+        aspect-ratio: 4/5;
+        overflow: hidden;
+        border-radius: 4px;
+        cursor: zoom-in;
+        position: relative;
+      }
+      .main svg,
+      .main .room {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.2s;
+      }
+      .th {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .th button {
+        width: 80px;
+        aspect-ratio: 1;
+        padding: 0;
+        border: 2px solid transparent;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 3px;
+      }
+      .th button.on {
+        border-color: var(--mr);
+      }
+      .opt {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .opt button {
+        padding: 8px 14px;
+        border: 1.5px solid #cdb98f;
+        background: #fffaf0;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+      .opt button.on {
+        border-color: var(--mr);
+        background: var(--mr);
+        color: var(--iv);
+      }
+      .q {
+        display: inline-flex;
+        border: 1px solid #cdb98f;
+      }
+      .q button {
+        width: 38px;
+        border: 0;
+        background: #fffaf0;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      .q span {
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+      }
+      details {
+        border-top: 1px solid #d8c8a3;
+        padding: 12px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      /* drawer & modal */
+      .ov {
+        position: fixed;
+        inset: 0;
+        background: #2b1f1799;
+        z-index: 40;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .ov.o {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .dr {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(420px, 100%);
+        background: var(--iv);
+        z-index: 41;
+        transform: translateX(105%);
+        transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .dr.o {
+        transform: none;
+      }
+      .dr .ls {
+        flex: 1;
+        overflow: auto;
+      }
+      .li {
+        display: grid;
+        grid-template-columns: 64px 1fr auto;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #d8c8a3;
+      }
+      .li .ph {
+        width: 64px;
+        height: 80px;
+      }
+      .md {
+        position: fixed;
+        z-index: 41;
+        left: 50%;
+        top: 50%;
+        width: min(780px, 94vw);
+        max-height: 90vh;
+        overflow: auto;
+        background: var(--iv);
+        transform: translate(-50%, -46%) scale(0.97);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+        padding: 24px;
+        border-radius: 4px;
+      }
+      .md.o {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%);
+      }
+      #toast {
+        position: fixed;
+        left: 50%;
+        bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+        transform: translate(-50%, 40px);
+        background: var(--wn);
+        color: var(--iv);
+        padding: 10px 20px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 60;
+        pointer-events: none;
+      }
+      #toast.o {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .wa {
+        position: fixed;
+        right: 18px;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        z-index: 35;
+        background: #1f8f4e;
+        color: #fff;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        font-size: 26px;
+        box-shadow: 0 6px 20px #0005;
+      }
+      form .f {
+        margin-bottom: 14px;
+      }
+      form label {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .er {
+        color: #a3182b;
+        font-size: 13px;
+        min-height: 0;
+      }
+      input.bad,
+      select.bad,
+      textarea.bad {
+        border-color: #a3182b;
+      }
+      footer {
+        background: var(--wn);
+        color: #e5d8bf;
+        padding: 56px 0 28px;
+      }
+      footer h3 {
+        color: var(--iv);
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      footer a {
+        display: block;
+        text-decoration: none;
+        padding: 2px 0;
+      }
+      footer a:hover {
+        color: var(--gd);
+      }
+      .map {
+        aspect-ratio: 16/9;
+        background: repeating-linear-gradient(
+          45deg,
+          #e6d9bd 0 12px,
+          #efe4cf 12px 24px
+        );
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border: 1px solid var(--gd);
+        padding: 20px;
+      }
+      .tb {
+        overflow-x: auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (max-width: 820px) {
+        .hero .room {
+          animation: none;
+        }
+        .sec {
+          padding: 52px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nv">
+      <div class="w">
+        <a class="logo" href="#/">[Shop Name]</a>
+        <div class="nl" id="nl">
+          <a href="#/">Home</a><a href="#/shop">Shop</a
+          ><a href="#/collections">Collections</a><a href="#/story">Our Story</a
+          ><a href="#/contact">Contact</a>
+        </div>
+        <button class="ic" id="bs" aria-label="Search">&#9906;</button>
+        <button class="ic" id="bw" aria-label="Wishlist">
+          &#9825;<span class="bd" id="cw">0</span>
+        </button>
+        <button class="ic" id="bc" aria-label="Open cart">
+          &#128722;<span class="bd" id="cn">0</span>
+        </button>
+        <button class="ic" id="mb" aria-label="Menu">&#9776;</button>
+      </div>
+      <form id="sb" role="search">
+        <label class="sr" for="si" style="position: absolute; left: -9999px"
+          >Search carpets</label
+        ><input id="si" placeholder="Search carpets, e.g. maroon wool" />
+      </form>
+    </nav>
+    <main id="app"></main>
+    <footer>
+      <div class="w">
+        <div class="cols" style="align-items: start">
+          <div>
+            <h3>[Shop Name]</h3>
+            <p>
+              [Shop address], Bhadohi district, Uttar Pradesh, India<br />Phone:
+              [phone number]<br />Email: [email]<br />Hours: [opening hours]
+            </p>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <a href="#/shop">Shop</a><a href="#/collections">Collections</a
+            ><a href="#/story">Our Story</a
+            ><a href="#/contact">Custom orders</a>
+          </div>
+          <div>
+            <h3>Policies</h3>
+            <a href="#/policy/Shipping">Shipping policy</a
+            ><a href="#/policy/Returns">Returns policy</a
+            ><a href="#/policy/Privacy">Privacy policy</a>
+          </div>
+        </div>
+        <p style="margin-top: 30px; font-size: 14px">
+          &copy; [Year] [Shop Name]. Demo storefront: products, prices and
+          policies are sample content to be replaced.
+        </p>
+      </div>
+    </footer>
+    <a
+      class="wa"
+      id="wa"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      >&#9990;</a
+    >
+    <div class="ov" id="ov"></div>
+    <aside class="dr" id="dr" aria-label="Cart"></aside>
+    <div class="md" id="md" role="dialog" aria-modal="true"></div>
+    <div id="toast" role="status"></div>
+    <script>
+      const WA_NUMBER = "919999999999"; // CONFIG: shop WhatsApp number, country code first
+      const FREE_SHIP = 15000,
+        SHIP = 499;
+      const SZ = [
+        ["4×6 ft", 1],
+        ["5×8 ft", 1.6],
+        ["6×9 ft", 2.2],
+        ["8×10 ft", 3.3],
+      ];
+      const P = [
+        [
+          "Mughal Medallion",
+          "Traditional",
+          "Maroon",
+          ["#6b1824", "#e8d3a0", "#b8914a"],
+          "Wool",
+          "Rectangle",
+          9800,
+          [0, 1, 2, 3],
+          "In stock",
+        ],
+        [
+          "Heritage Garden",
+          "Traditional",
+          "Rust",
+          ["#8a3b22", "#f1e2c4", "#c79a4f"],
+          "Wool-silk blend",
+          "Rectangle",
+          14500,
+          [1, 2, 3],
+          "In stock",
+        ],
+        [
+          "Kashan Ivory",
+          "Traditional",
+          "Ivory",
+          ["#efe4cf", "#6b1824", "#b8914a"],
+          "Wool",
+          "Rectangle",
+          12200,
+          [1, 2, 3],
+          "In stock",
+        ],
+        [
+          "Walnut Trellis",
+          "Modern",
+          "Brown",
+          ["#4a3224", "#d8bd8f", "#b8914a"],
+          "Wool",
+          "Rectangle",
+          8600,
+          [0, 1, 2],
+          "In stock",
+        ],
+        [
+          "Slate Angles",
+          "Modern",
+          "Grey",
+          ["#5b5f66", "#d9d6cf", "#b8914a"],
+          "Viscose",
+          "Rectangle",
+          7400,
+          [0, 1, 2, 3],
+          "Low stock",
+        ],
+        [
+          "Saffron Diamonds",
+          "Modern",
+          "Gold",
+          ["#c98f2e", "#4a3224", "#f7f0e3"],
+          "Cotton",
+          "Rectangle",
+          5200,
+          [0, 1],
+          "In stock",
+        ],
+        [
+          "Plain Sand",
+          "Minimalist",
+          "Beige",
+          ["#d9c7a6", "#c2ab84", "#8a6d3b"],
+          "Wool",
+          "Rectangle",
+          6900,
+          [1, 2, 3],
+          "In stock",
+        ],
+        [
+          "Soft Stone",
+          "Minimalist",
+          "Grey",
+          ["#cfcac0", "#a9a398", "#6e675c"],
+          "Cotton",
+          "Round",
+          4800,
+          [0, 1],
+          "In stock",
+        ],
+        [
+          "Ink Stripe",
+          "Minimalist",
+          "Navy",
+          ["#243049", "#d9d6cf", "#b8914a"],
+          "Wool",
+          "Rectangle",
+          7900,
+          [0, 1, 2],
+          "Made to order",
+        ],
+        [
+          "Custom Medallion Studio",
+          "Custom",
+          "Maroon",
+          ["#5e1420", "#d7b97a", "#f7f0e3"],
+          "Wool",
+          "Round",
+          11800,
+          [1, 2],
+          "Made to order",
+        ],
+        [
+          "Made-to-Measure Border",
+          "Custom",
+          "Green",
+          ["#2f4a3a", "#e8d3a0", "#b8914a"],
+          "Wool-silk blend",
+          "Rectangle",
+          15800,
+          [1, 2, 3],
+          "Made to order",
+        ],
+        [
+          "Bespoke Weave",
+          "Custom",
+          "Brown",
+          ["#6a4a33", "#efe4cf", "#b8914a"],
+          "Jute",
+          "Rectangle",
+          6100,
+          [0, 1, 2],
+          "In stock",
+        ],
+      ].map((a, i) => ({
+        id: i + 1,
+        name: a[0],
+        design: a[1],
+        colour: a[2],
+        col: a[3],
+        mat: a[4],
+        shape: a[5],
+        base: a[6],
+        sizes: a[7],
+        stock: a[8],
+      }));
+      const price = (p, s) => Math.round((p.base * SZ[s][1]) / 100) * 100;
+      const inr = (n) => "₹" + n.toLocaleString("en-IN");
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+      const ld = (k, d) => {
+        try {
+          return JSON.parse(localStorage.getItem(k)) || d;
+        } catch (e) {
+          return d;
+        }
+      };
+      const sv = (k, v) => {
+        try {
+          localStorage.setItem(k, JSON.stringify(v));
+        } catch (e) {}
+      };
+      let cart = ld("cart", []),
+        wish = ld("wish", []);
+      const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches,
+        desk = matchMedia("(hover:hover) and (min-width:900px)").matches;
+      /* carpet art (sample illustration; replace with product photos) */
+      function art(p, mode) {
+        const [a, b, c] = p.col,
+          d = p.design,
+          round = p.shape === "Round";
+        let g = `<defs><pattern id="wv" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 2h4M2 0v4" stroke="#000" stroke-opacity=".09"/></pattern></defs>`;
+        const vb = mode === "close" ? "70 110 70 70" : "0 0 200 300";
+        g += round
+          ? `<rect width="200" height="300" fill="#e9dcc3"/><g><circle cx="100" cy="150" r="96" fill="${a}"/><circle cx="100" cy="150" r="90" fill="none" stroke="${c}" stroke-width="3"/><circle cx="100" cy="150" r="80" fill="none" stroke="${b}" stroke-width="1.5" stroke-dasharray="5 4"/>`
+          : `<rect width="200" height="300" fill="${a}"/><g><rect x="8" y="8" width="184" height="284" fill="none" stroke="${c}" stroke-width="3"/><rect x="16" y="16" width="168" height="268" fill="none" stroke="${b}" stroke-width="1.5" stroke-dasharray="6 4"/>`;
+        if (d === "Traditional")
+          g += `<polygon points="100,50 165,150 100,250 35,150" fill="${b}"/><polygon points="100,72 142,150 100,228 58,150" fill="${a}" stroke="${c}" stroke-width="2"/><circle cx="100" cy="150" r="18" fill="${c}"/><circle cx="100" cy="150" r="8" fill="${b}"/>${[
+            [40, 40],
+            [160, 40],
+            [40, 260],
+            [160, 260],
+          ]
+            .map(
+              (q) =>
+                `<polygon points="${q[0]},${q[1] - 14} ${q[0] + 14},${q[1]} ${q[0]},${q[1] + 14} ${q[0] - 14},${q[1]}" fill="${c}"/>`,
+            )
+            .join("")}`;
+        else if (d === "Modern")
+          for (let i = 0; i < 6; i++)
+            g += `<polygon points="${30 + i * 28},40 ${58 + i * 28},40 ${30 + i * 28},260" fill="${i % 2 ? b : c}" opacity=".85"/>`;
+        else if (d === "Minimalist")
+          g += `<rect x="40" y="110" width="120" height="80" fill="${b}"/>${[0, 1, 2, 3].map((i) => `<rect x="40" y="${215 + i * 10}" width="120" height="2" fill="${c}"/>`).join("")}`;
+        else
+          g += `${[80, 62, 44, 26].map((r, i) => `<circle cx="100" cy="150" r="${r}" fill="${i % 2 ? a : b}" stroke="${c}" stroke-width="2"/>`).join("")}${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<circle cx="${100 + Math.cos(i * 0.785) * 92}" cy="${150 + Math.sin(i * 0.785) * 92}" r="4" fill="${c}"/>`).join("")}`;
+        g += `</g><rect width="200" height="300" fill="url(#wv)"/>`;
+        return `<svg viewBox="${vb}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${p.name} carpet illustration (sample)">${g}</svg>`;
+      }
+      const room = (p) =>
+        `<div class="room" style="width:100%;height:100%"><div class="lamp"></div><div class="sofa"></div><div class="rug">${art(p)}</div></div>`;
+      /* helpers */
+      function toast(m) {
+        const t = $("#toast");
+        t.textContent = m;
+        t.classList.add("o");
+        clearTimeout(t._t);
+        t._t = setTimeout(() => t.classList.remove("o"), 2200);
+      }
+      const cnt = () => {
+        $("#cn").textContent = cart.reduce((s, i) => s + i.q, 0);
+        $("#cw").textContent = wish.length;
+        sv("cart", cart);
+        sv("wish", wish);
+      };
+      const wl = (p) =>
+        `<button class="wl ${wish.includes(p.id) ? "on" : ""}" data-w="${p.id}" aria-label="Toggle wishlist for ${p.name}" aria-pressed="${wish.includes(p.id)}">${wish.includes(p.id) ? "♥" : "♡"}</button>`;
+      function card(p) {
+        const s = p.sizes[0];
+        return `<article class="pc rv"><a class="ph" href="#/product/${p.id}" aria-label="View ${p.name}">${art(p)}</a>${wl(p)}<button class="qv" data-qv="${p.id}">Quick view</button><div class="b"><h3>${p.name}</h3><div class="mt">${p.mat} · ${SZ[s][0]} · ${p.colour}</div><div class="pr">${inr(price(p, s))}</div><button class="btn sm" data-add="${p.id}" data-s="${s}">Quick add</button></div></article>`;
+      }
+      function waLink(msg) {
+        return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+      }
+      $("#wa").href = waLink("Hello, I would like to enquire about carpets.");
+      /* cart */
+      function add(id, s, q = 1) {
+        const i = cart.find((x) => x.id == id && x.s == s);
+        i ? (i.q += q) : cart.push({ id: +id, s: +s, q });
+        cnt();
+        drawCart();
+        toast("Added to cart");
+      }
+      const tot = () => {
+        const sub = cart.reduce((t, i) => t + price(P[i.id - 1], i.s) * i.q, 0);
+        const sh = !sub || sub >= FREE_SHIP ? 0 : SHIP;
+        return { sub, sh, t: sub + sh };
+      };
+      function drawCart() {
+        const { sub, sh, t } = tot();
+        $("#dr").innerHTML =
+          `<div class="row sp"><h2 style="font-size:30px">Your cart</h2><button class="ic" data-close aria-label="Close cart">&#10005;</button></div><div class="ls">${
+            cart.length
+              ? cart
+                  .map((i, k) => {
+                    const p = P[i.id - 1];
+                    return `<div class="li"><div class="ph">${art(p)}</div><div><strong>${p.name}</strong><div class="mt">${SZ[i.s][0]} · ${inr(price(p, i.s))}</div><div class="q" style="margin-top:6px"><button data-q="${k}" data-d="-1" aria-label="Decrease">−</button><span>${i.q}</span><button data-q="${k}" data-d="1" aria-label="Increase">+</button></div></div><button class="ic" data-rm="${k}" aria-label="Remove ${p.name}">&#128465;</button></div>`;
+                  })
+                  .join("")
+              : '<div class="empty">Your cart is empty.<br><a href="#/shop" data-close>Browse carpets</a></div>'
+          }</div>
+<div style="padding-top:14px"><div class="row sp"><span>Subtotal</span><span>${inr(sub)}</span></div><div class="row sp"><span>Shipping</span><span>${sh ? inr(sh) : sub ? "Free" : "—"}</span></div><div class="row sp serif" style="font-size:26px"><span>Total</span><span>${inr(t)}</span></div><p class="mt">Free shipping above ${inr(FREE_SHIP)} (sample rule).</p><a class="btn" style="display:block;text-align:center;${cart.length ? "" : "pointer-events:none;opacity:.5"}" href="#/checkout" data-close>Checkout</a></div>`;
+      }
+      function panel(el, o) {
+        el.classList.toggle("o", o);
+        $("#ov").classList.toggle(
+          "o",
+          o ||
+            $("#dr").classList.contains("o") ||
+            $("#md").classList.contains("o"),
+        );
+        if (o)
+          setTimeout(() => el.querySelector("button,a,input")?.focus(), 50);
+      }
+      function closeAll() {
+        $("#dr").classList.remove("o");
+        $("#md").classList.remove("o");
+        $("#ov").classList.remove("o");
+      }
+      /* pages */
+      const F0 = {
+        q: "",
+        price: 60000,
+        size: "",
+        colour: "",
+        mat: "",
+        shape: "",
+        design: "",
+        sort: "new",
+      };
+      let F = { ...F0 };
+      const uniq = (k) => [...new Set(P.map((p) => p[k]))].sort();
+      function pHome() {
+        const best = [P[0], P[3], P[6], P[1]];
+        return `<section class="hero"><div class="room"><div class="lamp"></div><div class="sofa"></div><div class="rug" id="hr">${art(P[0])}</div></div><div class="w"><h1>Bring Warmth, Texture &amp; Elegance Home.</h1><p>Explore beautiful carpets from our shop in Bhadohi, Uttar Pradesh.</p><div class="bt"><a class="btn" href="#/shop">Shop Carpets</a><a class="btn l" href="#/collections">Explore Collections</a></div></div></section>
+<section class="sec"><div class="w"><h2 class="rv">Featured collections</h2><span class="weave"></span>${colls()}</div></section>
+<section class="sec iv2"><div class="w"><div class="row sp"><div><h2 class="rv">Bestsellers</h2><span class="weave"></span></div><a class="btn o sm" href="#/shop">View all</a></div><p class="note">Sample products and prices. Replace with real inventory.</p><br><div class="g4">${best.map(card).join("")}</div></div></section>
+<section class="sec"><div class="w cols"><div class="rv"><h2>Craftsmanship</h2><span class="weave"></span><p>Carpet weaving is the heart of the Bhadohi region. Use this section to describe how you select carpets and who makes them. [Add your real story, weavers and process here. No claims are included until you supply them.]</p><a class="btn o" href="#/story">Our story</a></div><div class="ph rv" style="aspect-ratio:4/3;border-radius:4px">${art(P[0], "close")}</div></div></section>
+<section class="sec dk"><div class="w cols"><div class="rv"><h2>Custom sizes &amp; bulk orders</h2><span class="weave"></span><p>Need a specific size, colour or design? We take enquiries for homes, hotels, offices and bulk purchases.</p><div class="bt"><a class="btn l" href="#/contact">Send an enquiry</a><a class="btn l" href="${waLink("Hello, I want a custom size carpet.")}" target="_blank" rel="noopener">WhatsApp us</a></div></div><div class="ph" style="aspect-ratio:16/10;border-radius:4px;max-height:300px">${room(P[9])}</div></div></section>
+<section class="sec"><div class="w cols"><div class="rv"><h2>Visit our showroom</h2><span class="weave"></span><p>[Shop address], Bhadohi district, Uttar Pradesh.<br>[Opening hours]</p><a class="btn" href="#/contact">Get directions</a></div>${map()}</div></section>`;
+      }
+      function colls() {
+        const c = [
+          ["Traditional", P[0]],
+          ["Modern", P[3]],
+          ["Minimalist", P[6]],
+          ["Custom", P[9]],
+        ];
+        return `<div class="g4">${c.map(([n, p]) => `<a class="cc tilt rv" href="#/shop?design=${n}"><div class="ph">${art(p)}</div><div class="t"><h3>${n}</h3><span>${n === "Custom" ? "Made to your size" : "Shop " + n.toLowerCase() + " carpets"}</span></div></a>`).join("")}</div>`;
+      }
+      const map = () =>
+        `<div class="map"><div><strong>Map placeholder</strong><p class="mt">Replace with a Google Maps embed of your shop's location.</p></div></div>`;
+      function filt() {
+        const q = F.q.toLowerCase();
+        let r = P.filter(
+          (p) =>
+            (!q ||
+              [p.name, p.colour, p.mat, p.design, p.shape]
+                .join(" ")
+                .toLowerCase()
+                .includes(q)) &&
+            price(p, p.sizes[0]) <= F.price &&
+            (!F.size || p.sizes.includes(+F.size)) &&
+            (!F.colour || p.colour === F.colour) &&
+            (!F.mat || p.mat === F.mat) &&
+            (!F.shape || p.shape === F.shape) &&
+            (!F.design || p.design === F.design),
+        );
+        return r.sort((a, b) =>
+          F.sort === "lo"
+            ? a.base - b.base
+            : F.sort === "hi"
+              ? b.base - a.base
+              : b.id - a.id,
+        );
+      }
+      const sel = (k, l, o) =>
+        `<label for="f-${k}">${l}</label><select id="f-${k}" data-f="${k}"><option value="">All</option>${o.map((v) => `<option value="${v[0]}" ${F[k] == v[0] ? "selected" : ""}>${v[1]}</option>`).join("")}</select>`;
+      function pShop() {
+        const act = Object.keys(F0).filter(
+          (k) => k !== "sort" && F[k] !== F0[k],
+        );
+        return `<div class="w pt sec" style="padding-top:110px"><h2>Shop carpets</h2><span class="weave"></span><p class="note">Sample products. Replace with real inventory.</p><br>
+<div class="row sp" style="margin-bottom:16px"><button class="btn o sm" id="ft">Filters</button><div class="row"><label for="so" class="mt">Sort by</label><select id="so" data-f="sort" style="width:auto"><option value="new" ${F.sort == "new" ? "selected" : ""}>Newest</option><option value="lo" ${F.sort == "lo" ? "selected" : ""}>Price: low to high</option><option value="hi" ${F.sort == "hi" ? "selected" : ""}>Price: high to low</option></select></div></div>
+<div class="shop"><aside id="fp" class="fl" aria-label="Filters"><label for="f-q">Search</label><input id="f-q" data-f="q" value="${F.q}" placeholder="Name, colour…"><label for="f-price">Max price (smallest size): ${inr(+F.price)}</label><input type="range" id="f-price" data-f="price" min="4000" max="60000" step="1000" value="${F.price}">
+${sel(
+  "size",
+  "Size",
+  SZ.map((s, i) => [i, s[0]]),
+)}${sel(
+          "colour",
+          "Colour",
+          uniq("colour").map((v) => [v, v]),
+        )}${sel(
+          "mat",
+          "Material",
+          uniq("mat").map((v) => [v, v]),
+        )}${sel(
+          "shape",
+          "Shape",
+          uniq("shape").map((v) => [v, v]),
+        )}${sel(
+          "design",
+          "Design",
+          uniq("design").map((v) => [v, v]),
+        )}<br><button class="btn o sm" id="clr">Clear filters</button></aside>
+<div><div class="row" style="margin-bottom:14px" aria-live="polite">${act.map((k) => `<button class="chip" data-x="${k}">${k === "size" ? SZ[F.size][0] : k === "price" ? "Up to " + inr(+F.price) : F[k]} &#10005;</button>`).join("")}</div><div id="res"></div></div></div></div>`;
+      }
+      function res() {
+        const r = filt();
+        $("#res").innerHTML = r.length
+          ? `<p class="mt">${r.length} carpet${r.length > 1 ? "s" : ""}</p><div class="g4">${r.map(card).join("")}</div>`
+          : `<div class="empty"><h3>No carpets match these filters</h3><p>Try a higher price, or clear a filter. Looking for something specific? <a href="#/contact">Send a custom enquiry</a>.</p><button class="btn" id="clr2">Clear all filters</button></div>`;
+        reveal();
+      }
+      let PS = {};
+      function pProd(id) {
+        const p = P[id - 1];
+        if (!p)
+          return `<div class="w empty" style="margin-top:120px">Carpet not found. <a href="#/shop">Back to shop</a></div>`;
+        PS = { id, s: p.sizes[0], q: 1, g: 0 };
+        return `<div class="w" style="padding-top:100px;padding-bottom:60px"><p class="mt"><a href="#/shop">Shop</a> / ${p.design} / ${p.name}</p><div class="pd"><div><div class="main" id="mn" aria-label="Zoom image"></div><div class="th" id="th"></div><p class="mt">Illustrations are samples. Hover or tap the image to zoom.</p></div>
+<div><h1 style="font-size:44px">${p.name}</h1><div class="pr serif" style="font-size:32px" id="pp"></div><p><span class="tag">${p.stock}</span> <span class="mt">${p.mat} · ${p.colour} · ${p.shape} · ${p.design}</span></p>
+<strong>Size</strong><div class="opt" id="os" style="margin:6px 0 16px">${p.sizes.map((s) => `<button data-s="${s}" class="${s == PS.s ? "on" : ""}">${SZ[s][0]}</button>`).join("")}</div>
+<strong>Quantity</strong><div style="margin:6px 0 18px"><div class="q"><button id="qm" aria-label="Decrease">−</button><span id="qn">1</span><button id="qp" aria-label="Increase">+</button></div></div>
+<div class="bt"><button class="btn" id="ac">Add to cart</button><button class="btn o" id="bn">Buy now</button><a class="btn o" id="wq" target="_blank" rel="noopener" href="#">Enquire on WhatsApp</a></div>
+<details open><summary>Delivery</summary><div class="row" style="margin:8px 0"><label for="pin" style="position:absolute;left:-9999px">Delivery postcode</label><input id="pin" placeholder="6-digit postcode" inputmode="numeric" maxlength="6" style="max-width:180px"><button class="btn sm" id="pc">Check</button></div><div id="pm" class="mt" aria-live="polite">Shipping information: [add delivery times and charges]. Sample rule: free above ${inr(FREE_SHIP)}.</div></details>
+<details><summary>Care instructions</summary><p>Vacuum gently without a beater bar, blot spills quickly, rotate occasionally and avoid direct sun. [Replace with care advice for this carpet.]</p></details>
+<details><summary>Returns policy</summary><p>[Add your returns policy here.]</p></details>
+<details><summary>Need a different size?</summary><p>We can enquire about custom sizes. <a href="#/contact">Send a custom-size enquiry</a>.</p></details></div></div>
+<h2 style="margin-top:60px">Related carpets</h2><span class="weave"></span><div class="g4">${P.filter(
+          (x) =>
+            x.id !== p.id && (x.design === p.design || x.colour === p.colour),
+        )
+          .slice(0, 4)
+          .map(card)
+          .join("")}</div></div>`;
+      }
+      function pdUpd() {
+        const p = P[PS.id - 1];
+        $("#pp").textContent = inr(price(p, PS.s) * PS.q);
+        $("#qn").textContent = PS.q;
+        $("#wq").href = waLink(
+          `Hello, I'm interested in ${p.name} (${SZ[PS.s][0]}, qty ${PS.q}).`,
+        );
+        $("#mn").innerHTML =
+          PS.g == 2 ? room(p) : art(p, PS.g == 1 ? "close" : "");
+        $("#th").innerHTML = [0, 1, 2]
+          .map(
+            (i) =>
+              `<button data-g="${i}" class="${PS.g == i ? "on" : ""}" aria-label="Image ${i + 1}"><div style="width:100%;height:100%;pointer-events:none">${i == 2 ? room(p) : art(p, i == 1 ? "close" : "")}</div></button>`,
+          )
+          .join("");
+        $$("#os button").forEach((b) =>
+          b.classList.toggle("on", b.dataset.s == PS.s),
+        );
+      }
+      function pStory() {
+        return `<div class="w" style="padding-top:120px;padding-bottom:70px"><h1 style="font-size:clamp(40px,6vw,70px)">Our story</h1><span class="weave"></span><div class="cols"><div><h2 style="font-size:32px">[Shop story]</h2><p>[Tell customers who you are, how the shop began and why you work with carpets in Bhadohi. Write only what is true; no awards, certifications or years of experience are added here.]</p><h2 style="font-size:32px;margin-top:24px">How we select carpets</h2><p>[Describe how you choose carpets, materials and makers.]</p><h2 style="font-size:32px;margin-top:24px">Craftsmanship</h2><p>[Describe the weaving and finishing of your carpets.]</p></div><div class="ph" style="aspect-ratio:4/5;border-radius:4px" id="px">${room(P[2])}</div></div><p class="note" style="margin-top:20px">Editable placeholder: swap the illustration for photographs of your shop and carpets.</p></div>`;
+      }
+      function pContact() {
+        return `<div class="w" style="padding-top:120px;padding-bottom:70px"><h1 style="font-size:clamp(40px,6vw,64px)">Contact &amp; custom orders</h1><span class="weave"></span><div class="cols" style="align-items:start"><div><p>[Shop address], Bhadohi district, Uttar Pradesh<br>Phone: [phone]<br>WhatsApp: [number]<br>Email: [email]<br>Hours: [opening hours]</p>${map()}</div>
+<form id="ef" novalidate><p class="note">Demo form: submissions are not sent until a backend is connected.</p><br>
+<div class="f"><label for="n">Name</label><input id="n" required><div class="er"></div></div><div class="f"><label for="ph">Phone</label><input id="ph" inputmode="numeric" maxlength="10" required><div class="er"></div></div>
+<div class="f"><label for="ty">Enquiry type</label><select id="ty"><option>Home</option><option>Hotel</option><option>Office</option><option>Bulk purchase</option></select></div>
+<div class="f"><label for="sz">Carpet size</label><input id="sz" placeholder="e.g. 8×10 ft"></div><div class="f"><label for="mt">Preferred material</label><select id="mt"><option>Any</option>${uniq(
+          "mat",
+        )
+          .map((m) => `<option>${m}</option>`)
+          .join("")}</select></div>
+<div class="f"><label for="bg">Budget (₹)</label><input id="bg" inputmode="numeric"></div><div class="f"><label for="ms">Message</label><textarea id="ms" rows="4" required></textarea><div class="er"></div></div><button class="btn" type="submit">Send enquiry</button><p id="es" role="status"></p></form></div></div>`;
+      }
+      function pCheck() {
+        if (!cart.length)
+          return `<div class="w empty" style="margin-top:120px">Your cart is empty. <a href="#/shop">Browse carpets</a></div>`;
+        const { sub, sh, t } = tot();
+        return `<div class="w" style="padding-top:110px;padding-bottom:70px"><h1 style="font-size:46px">Checkout</h1><span class="weave"></span><p class="note">DEMO checkout: no real payment is taken. Connect a payment provider in test mode; success should show only after server-side verification.</p><br><div class="cols" style="align-items:start"><form id="cf" novalidate><h3>Customer &amp; delivery</h3><br>
+${[
+  ["cn", "Full name"],
+  ["cp", "Mobile number"],
+  ["ce", "Email"],
+  ["ca", "Address"],
+  ["cc", "City / town"],
+  ["cz", "Postcode"],
+]
+  .map(
+    (f) =>
+      `<div class="f"><label for="${f[0]}">${f[1]}</label><input id="${f[0]}" required><div class="er"></div></div>`,
+  )
+  .join("")}
+<h3>Payment method</h3><div class="opt" style="margin:10px 0 20px" role="radiogroup" id="pm2">${["UPI", "Card", "Net banking", "Cash on delivery"].map((m, i) => `<button type="button" data-pay="${m}" class="${i ? "" : "on"}" role="radio" aria-checked="${!i}">${m}</button>`).join("")}</div><button class="btn" type="submit" id="pay">Pay ${inr(t)} (demo)</button></form>
+<div style="background:#fffaf0;padding:20px;border:1px solid #e3d5b8"><h3>Order summary</h3>${cart
+          .map((i) => {
+            const p = P[i.id - 1];
+            return `<div class="row sp" style="margin:8px 0"><span>${p.name} · ${SZ[i.s][0]} × ${i.q}</span><span>${inr(price(p, i.s) * i.q)}</span></div>`;
+          })
+          .join(
+            "",
+          )}<hr><div class="row sp"><span>Subtotal</span><span>${inr(sub)}</span></div><div class="row sp"><span>Shipping</span><span>${sh ? inr(sh) : "Free"}</span></div><div class="row sp serif" style="font-size:28px"><span>Total</span><span>${inr(t)}</span></div></div></div></div>`;
+      }
+      function pDone() {
+        const o = ld("order", null);
+        return o
+          ? `<div class="w" style="padding-top:130px;padding-bottom:80px;max-width:720px"><h1>Thank you, ${o.name}</h1><span class="weave"></span><p class="note">Demo order, no payment was taken.</p><p>Order <strong>${o.id}</strong> · Paid via ${o.pay} (simulated verification) · Total ${inr(o.t)}</p>${o.items.map((i) => `<div class="row sp"><span>${i.n}</span><span>${inr(i.v)}</span></div>`).join("")}<br><a class="btn" href="#/shop">Continue shopping</a></div>`
+          : `<div class="w empty" style="margin-top:120px">No order found. <a href="#/shop">Shop</a></div>`;
+      }
+      const pPol = (n) =>
+        `<div class="w" style="padding:130px 20px 80px;max-width:760px"><h1>${decodeURIComponent(n)} policy</h1><span class="weave"></span><p>[Add your ${decodeURIComponent(n).toLowerCase()} policy text here.]</p></div>`;
+      const pColl = () =>
+        `<div class="w" style="padding-top:120px;padding-bottom:70px"><h1 style="font-size:clamp(40px,6vw,64px)">Collections</h1><span class="weave"></span>${colls()}</div>`;
+      const pWish = () =>
+        `<div class="w" style="padding-top:120px;padding-bottom:70px"><h1>Wishlist</h1><span class="weave"></span>${wish.length ? `<div class="g4">${wish.map((i) => card(P[i - 1])).join("")}</div>` : '<div class="empty">Nothing saved yet. Tap the heart on any carpet.</div>'}</div>`;
+      /* router */
+      function route() {
+        closeAll();
+        const h = location.hash.slice(1) || "/",
+          [path, qs] = h.split("?"),
+          s = path.split("/");
+        const pg = s[1] || "";
+        if (pg === "shop") {
+          F = { ...F0 };
+          new URLSearchParams(qs || "").forEach((v, k) => {
+            if (k in F) F[k] = v;
+          });
+        }
+        const m = {
+          "": pHome,
+          shop: pShop,
+          collections: pColl,
+          story: pStory,
+          contact: pContact,
+          checkout: pCheck,
+          done: pDone,
+          wishlist: pWish,
+        };
+        $("#app").innerHTML =
+          pg === "product"
+            ? pProd(+s[2])
+            : pg === "policy"
+              ? pPol(s[2] || "")
+              : (m[pg] || pHome)();
+        scrollTo(0, 0);
+        $$(".nl a").forEach((a) =>
+          a.classList.toggle(
+            "on",
+            a.getAttribute("href") === "#/" + pg ||
+              (!pg && a.getAttribute("href") === "#/"),
+          ),
+        );
+        nvs();
+        if (pg === "shop") res();
+        if (pg === "product") pdUpd();
+        reveal();
+        $("#nl").classList.remove("o");
+      }
+      function reveal() {
+        const io = new IntersectionObserver(
+          (e) =>
+            e.forEach((x) => {
+              if (x.isIntersecting) {
+                x.target.classList.add("in");
+                io.unobserve(x.target);
+              }
+            }),
+          { threshold: 0.12 },
+        );
+        $$(".rv:not(.in)").forEach((n) => io.observe(n));
+      }
+      function nvs() {
+        const solid = scrollY > 40 || !$(".hero");
+        $("#nv").classList.toggle("s", solid);
+      }
+      addEventListener(
+        "scroll",
+        () => {
+          nvs();
+          if (!reduce && desk) {
+            const r = $("#hr");
+            if (r && scrollY < innerHeight)
+              r.style.transform = `rotateX(62deg) translateY(${scrollY * 0.05}px)`;
+            const x = $("#px .rug");
+            if (x) x.style.marginTop = scrollY * 0.04 + "px";
+          }
+        },
+        { passive: true },
+      );
+      addEventListener("hashchange", route);
+      /* events */
+      const fe = (e, k) => {
+        F[k] = e.value;
+        if (k === "price")
+          document.querySelector("label[for=f-price]").textContent =
+            "Max price (smallest size): " + inr(+e.value);
+        res();
+        if (k !== "q" && k !== "price") route2();
+      };
+      function route2() {
+        const a = document.activeElement.id,
+          y = scrollY;
+        $("#app").style.animation = "none";
+        $("#app").innerHTML = pShop();
+        res();
+        $("#app").style.animation = "";
+        scrollTo(0, y);
+        document.getElementById(a)?.focus();
+      }
+      document.addEventListener("input", (e) => {
+        const f = e.target.dataset.f;
+        if (f && (f === "q" || f === "price")) fe(e.target, f);
+      });
+      document.addEventListener("change", (e) => {
+        const f = e.target.dataset.f;
+        if (f && f !== "q" && f !== "price") {
+          F[f] = e.target.value;
+          route2();
+        }
+      });
+      document.addEventListener("click", (e) => {
+        const t = e.target,
+          c = (s) => t.closest(s);
+        let b;
+        if (c("[data-close]") || t === $("#ov")) closeAll();
+        if ((b = c("[data-add]"))) add(b.dataset.add, b.dataset.s);
+        if ((b = c("[data-w]"))) {
+          const i = +b.dataset.w;
+          wish = wish.includes(i) ? wish.filter((x) => x !== i) : [...wish, i];
+          cnt();
+          toast(
+            wish.includes(i) ? "Saved to wishlist" : "Removed from wishlist",
+          );
+          if (location.hash === "#/wishlist") route();
+          else
+            $$(`[data-w="${i}"]`).forEach((w) => {
+              const on = wish.includes(i);
+              w.classList.toggle("on", on);
+              w.textContent = on ? "♥" : "♡";
+              w.setAttribute("aria-pressed", on);
+            });
+        }
+        if ((b = c("[data-qv]"))) {
+          const p = P[b.dataset.qv - 1];
+          $("#md").innerHTML =
+            `<div class="row sp"><h2 style="font-size:32px">${p.name}</h2><button class="ic" data-close aria-label="Close">&#10005;</button></div><div class="cols"><div class="ph" style="aspect-ratio:4/5">${art(p)}</div><div><div class="pr serif" style="font-size:28px">From ${inr(price(p, p.sizes[0]))}</div><p class="mt">${p.mat} · ${p.colour} · ${p.shape} · ${p.stock}</p><p>Sizes: ${p.sizes.map((s) => SZ[s][0]).join(", ")}</p><div class="bt"><button class="btn" data-add="${p.id}" data-s="${p.sizes[0]}" data-close>Add to cart</button><a class="btn o" href="#/product/${p.id}" data-close>Full details</a></div></div></div>`;
+          panel($("#md"), true);
+        }
+        if ((b = c("[data-q]"))) {
+          const i = cart[b.dataset.q];
+          i.q += +b.dataset.d;
+          if (i.q < 1) cart.splice(b.dataset.q, 1);
+          cnt();
+          drawCart();
+        }
+        if ((b = c("[data-rm]"))) {
+          cart.splice(b.dataset.rm, 1);
+          cnt();
+          drawCart();
+        }
+        if ((b = c("[data-x]"))) {
+          F[b.dataset.x] = F0[b.dataset.x];
+          route2();
+        }
+        if (c("#clr,#clr2")) {
+          F = { ...F0 };
+          route2();
+        }
+        if (c("#ft")) $("#fp").classList.toggle("o");
+        if ((b = c("#os [data-s]"))) {
+          PS.s = +b.dataset.s;
+          pdUpd();
+        }
+        if ((b = c("#th [data-g]"))) {
+          PS.g = +b.dataset.g;
+          pdUpd();
+        }
+        if (c("#qm")) {
+          PS.q = Math.max(1, PS.q - 1);
+          pdUpd();
+        }
+        if (c("#qp")) {
+          PS.q = Math.min(10, PS.q + 1);
+          pdUpd();
+        }
+        if (c("#ac")) {
+          add(PS.id, PS.s, PS.q);
+        }
+        if (c("#bn")) {
+          add(PS.id, PS.s, PS.q);
+          closeAll();
+          location.hash = "#/checkout";
+        }
+        if (c("#pc")) {
+          const v = $("#pin").value;
+          $("#pm").textContent = /^\d{6}$/.test(v)
+            ? `Delivery to ${v}: [estimated delivery time]. Demo check; connect a real service.`
+            : "Enter a valid 6-digit postcode.";
+        }
+        if ((b = c("[data-pay]"))) {
+          $$("[data-pay]").forEach((x) => {
+            x.classList.toggle("on", x === b);
+            x.setAttribute("aria-checked", x === b);
+          });
+        }
+      });
+      $("#bc").onclick = () => {
+        drawCart();
+        panel($("#dr"), true);
+      };
+      $("#bw").onclick = () => (location.hash = "#/wishlist");
+      $("#bs").onclick = () => {
+        $("#sb").classList.toggle("o");
+        $("#si").focus();
+      };
+      $("#mb").onclick = () => $("#nl").classList.toggle("o");
+      $("#sb").onsubmit = (e) => {
+        e.preventDefault();
+        const v = $("#si").value;
+        location.hash = "#/shop";
+        setTimeout(() => {
+          F.q = v;
+          $("#app").innerHTML = pShop();
+          res();
+        }, 0);
+      };
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeAll();
+          $("#sb").classList.remove("o");
+        }
+      });
+      document.addEventListener("mousemove", (e) => {
+        if (!desk || reduce) return;
+        const c = e.target.closest(".tilt");
+        $$(".tilt").forEach((n) => {
+          if (n !== c) n.style.transform = "";
+        });
+        if (c) {
+          const r = c.getBoundingClientRect(),
+            x = (e.clientX - r.left) / r.width - 0.5,
+            y = (e.clientY - r.top) / r.height - 0.5;
+          c.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+        }
+      });
+      document.addEventListener("mousemove", (e) => {
+        const m = e.target.closest(".main");
+        if (m && desk) {
+          const r = m.getBoundingClientRect(),
+            x = ((e.clientX - r.left) / r.width) * 100,
+            y = ((e.clientY - r.top) / r.height) * 100,
+            s = m.firstElementChild;
+          s.style.transformOrigin = `${x}% ${y}%`;
+          s.style.transform = "scale(1.8)";
+        } else $$(".main>*").forEach((s) => (s.style.transform = ""));
+      });
+      document.addEventListener("click", (e) => {
+        const m = e.target.closest(".main");
+        if (m && !desk) {
+          const s = m.firstElementChild;
+          s.style.transform = s.style.transform ? "" : "scale(1.8)";
+        }
+      });
+      /* forms */
+      const bad = (el, m) => {
+        el.classList.add("bad");
+        el.nextElementSibling.textContent = m;
+        return 1;
+      };
+      const ok = (el) => {
+        el.classList.remove("bad");
+        el.nextElementSibling.textContent = "";
+      };
+      function val(chk) {
+        let n = 0;
+        chk.forEach(([id, rx, m]) => {
+          const el = $("#" + id);
+          ok(el);
+          if (!rx.test(el.value.trim())) n += bad(el, m);
+        });
+        return !n;
+      }
+      document.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (e.target.id === "ef") {
+          if (
+            val([
+              ["n", /.{2,}/, "Enter your name."],
+              ["ph", /^\d{10}$/, "Enter a 10-digit mobile number."],
+              ["ms", /.{5,}/, "Tell us what you need."],
+            ])
+          ) {
+            const b = e.target.querySelector("button");
+            b.disabled = 1;
+            b.textContent = "Sending…";
+            setTimeout(() => {
+              b.disabled = 0;
+              b.textContent = "Send enquiry";
+              e.target.reset();
+              $("#es").textContent =
+                "Thanks! (Demo: your enquiry was not sent. Connect a backend to receive it.)";
+            }, 900);
+          } else $("#es").textContent = "Please fix the highlighted fields.";
+        }
+        if (e.target.id === "cf") {
+          if (
+            val([
+              ["cn", /.{2,}/, "Enter your full name."],
+              ["cp", /^\d{10}$/, "Enter a 10-digit mobile number."],
+              ["ce", /^\S+@\S+\.\S+$/, "Enter a valid email."],
+              ["ca", /.{6,}/, "Enter your address."],
+              ["cc", /.{2,}/, "Enter your city or town."],
+              ["cz", /^\d{6}$/, "Enter a 6-digit postcode."],
+            ])
+          ) {
+            const b = $("#pay");
+            b.disabled = 1;
+            b.textContent = "Verifying payment…";
+            const { t } = tot(),
+              pay = $("[data-pay].on").dataset.pay;
+            setTimeout(() => {
+              /* DEMO: replace with server-side payment verification */ sv(
+                "order",
+                {
+                  id: "DEMO-" + Date.now().toString().slice(-6),
+                  name: $("#cn").value.split(" ")[0],
+                  pay,
+                  t,
+                  items: cart.map((i) => ({
+                    n: P[i.id - 1].name + " × " + i.q,
+                    v: price(P[i.id - 1], i.s) * i.q,
+                  })),
+                },
+              );
+              cart = [];
+              cnt();
+              location.hash = "#/done";
+            }, 1300);
+          }
+        }
+      });
+      cnt();
+      route();
+    </script>
+  </body>
+</html>
